@@ -1,4 +1,3 @@
-
 const URL = 'https://randomuser.me/api/';
 
 function generarUsuario(){
@@ -20,7 +19,7 @@ function generarUsuario(){
             contenido.innerHTML+= `<div class="row">
              <div class="col">
              <div class="card m-3">
-              <img src="${inf.picture.thumbnail}" class="card-img-top" alt="Imagen de perfil">
+              <img src="${inf.picture.large}" class="card-img-top" alt="Imagen de perfil">
               <div class="card-body">
                 <h5 class="card-title">${inf.name.title+ ". "+inf.name.first + " "+inf.name.last}</h5>
                 <hr>
@@ -50,8 +49,6 @@ function generarUsuario(){
     console.error('Error:', error);
   });
 }
-  
-
   document.addEventListener('DOMContentLoaded',()=>{
        const btn = document.getElementById('generarBtn');
        btn.addEventListener('click',()=>{
@@ -59,6 +56,3 @@ function generarUsuario(){
        })
   
   })
-        
-    
-    
